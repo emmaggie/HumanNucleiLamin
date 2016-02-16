@@ -2,7 +2,7 @@
 
 ##### Requirements    
 You will need Fiji (ImageJ) to estimate certain starting parameters before you attempt adapting/building the pipeline. 
-Download and install CellProfiler from: http://www.cellprofiler.org/. The release used to build the pipeline below is: 2.1.1_6c2d896 (provided). 
+Download and install CellProfiler from: http://www.cellprofiler.org/. The release used to build the pipeline below is: 2.1.1_6c2d896 (provided at https://github.com/emmaggie/HumanNucleiLamin/tree/master/CellProfiler/). 
 Make sure you follow a pattern in naming your images and folders. This pattern is then used to both find all images of interest and to extract experimental metadata.
 To load any of the pipelines developed here, use: “File -> Open project” for files with an extension cpproj and “File -> Import -> Pipeline from file” for files for files with an extension cppipe.
 The pipeline below takes ~2.5 hours to analyze 149 TIFF images on MacBook Pro, 8GB RAM, 1.3 GHz Intel Core i5 processor (4 CPUs).
