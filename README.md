@@ -2,7 +2,7 @@
 
 ##### Requirements    
 You will need Fiji (ImageJ) to estimate certain starting parameters before you attempt adapting/building the pipeline. 
-Download and install CellProfiler from: http://www.cellprofiler.org/. The release used to build the pipeline below is: 2.1.1_6c2d896 (provided). 
+Download and install CellProfiler from: http://www.cellprofiler.org/. The release used to build the pipeline below is: 2.1.1_6c2d896 (provided at https://github.com/emmaggie/HumanNucleiLamin/tree/master/CellProfiler/). 
 Make sure you follow a pattern in naming your images and folders. This pattern is then used to both find all images of interest and to extract experimental metadata.
 To load any of the pipelines developed here, use: “File -> Open project” for files with an extension cpproj and “File -> Import -> Pipeline from file” for files for files with an extension cppipe.
 The pipeline below takes ~2.5 hours to analyze 149 TIFF images on MacBook Pro, 8GB RAM, 1.3 GHz Intel Core i5 processor (4 CPUs).
@@ -22,7 +22,7 @@ The pipeline below takes ~2.5 hours to analyze 149 TIFF images on MacBook Pro, 8
 - additional steps were added to capture potential phenotypical differences identified upon initial image evaluation in FIJI (disclaimer: all of these approaches are approximate and designed to capture differences, not to derive absolute quantification results):
 - to calculate approximate signal ratio between the lamina and nuclear interior, detected nuclei were shrunk and the shrunk version of objects was subtracted from the original objects to obtain lamina rings
 - to quantify speckled appearance of the nuclei, shrunk version of the nuclei was enhanced to bring out small speckle-like objects and Otsu algorithm was applied on Gaussian-smoothed shrunk nuclei to detect ‘speckle’-like object; these were than counted per nucleus 
-- quantification steps were largely adapted from the original pipeline (Figure S4A) and slightly adapted to also capture variables of interest described above; texture quantification was also added.
+- quantification steps were adapted to also capture variables of interest described above; texture quantification was also added.
 
 Analogues logic can be followed to adapt or create pipelines for other applications.
 
