@@ -20,9 +20,9 @@ The pipeline below takes ~2.5 hours to analyze 149 TIFF images on MacBook Pro, 8
 - given the quality of staining and imaging, the prepossessing steps were limited to  smoothing with Gaussian filter to limit the impact of noise on segmentation steps
 - segmentation used maximum correlation thresholding method {Padmanabhan:2010wg} (suitable for images with sparse foreground signal densities, e.g. the outlines of nuclei from lamin staining) and thresholding was used on tile by tile bases in lieu of global illumination correction (this is OK for images of the quality you provided)
 - additional steps were added to capture potential phenotypical differences identified upon initial image evaluation in FIJI (disclaimer: all of these approaches are approximate and designed to capture differences, not to derive absolute quantification results):
-- to calculate approximate signal ratio between the lamina and nuclear interior, detected nuclei were shrunk and the shrunk version of objects was subtracted from the original objects to obtain lamina rings
-- to quantify speckled appearance of the nuclei, shrunk version of the nuclei was enhanced to bring out small speckle-like objects and Otsu algorithm was applied on Gaussian-smoothed shrunk nuclei to detect ‘speckle’-like object; these were than counted per nucleus 
-- quantification steps were adapted to also capture variables of interest described above; texture quantification was also added.
+  - to calculate approximate signal ratio between the lamina and nuclear interior, detected nuclei were shrunk and the shrunk version of objects was subtracted from the original objects to obtain lamina rings
+  - to quantify speckled appearance of the nuclei, shrunk version of the nuclei was enhanced to bring out small speckle-like objects and Otsu algorithm was applied on Gaussian-smoothed shrunk nuclei to detect ‘speckle’-like object; these were than counted per nucleus 
+  - quantification steps were adapted to also capture variables of interest described above; texture quantification was also added.
 
 Analogues logic can be followed to adapt or create pipelines for other applications.
 
